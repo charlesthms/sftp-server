@@ -1,3 +1,16 @@
+"""
+SFTP Server with Paramiko
+
+Author: Charles THOMAS
+Date: 03/04/2024
+
+Description:
+This script implements a simple SFTP (SSH File Transfer Protocol) server using Paramiko, a Python library for SSH protocol implementation. It allows clients to connect and perform various file operations such as listing directories, creating directories, removing files, etc. The server runs on the specified host and port, handling multiple client connections concurrently. Each client connection is managed in a separate thread. 
+
+Credits:
+- Paramiko: https://www.paramiko.org/
+"""
+
 import paramiko
 from logger import Logger
 from paramiko import SFTPError, Transport, SFTPServer, ServerInterface, SFTPHandle
